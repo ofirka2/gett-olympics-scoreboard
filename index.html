@@ -24,6 +24,7 @@
             padding: 20px 30px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         .logo {
@@ -39,8 +40,9 @@
         }
 
         .admin-button {
-            display: inline-block;
-            margin-bottom: 20px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
             padding: 10px 20px;
             font-size: 1rem;
             color: #fff;
@@ -165,10 +167,11 @@
         </div>
     </div>
     <script>
-        const adminPassword = "trollers.";  // Change this to your desired password
+        const adminPassword = "your_password_here";  // Change this to your desired password
 
         document.addEventListener('DOMContentLoaded', (event) => {
             loadScores();
+            checkAdminAccess();
             document.querySelectorAll('[contenteditable="true"]').forEach(cell => {
                 cell.addEventListener('blur', () => {
                     saveScores();
@@ -181,9 +184,21 @@
         function requestAdminAccess() {
             const enteredPassword = prompt("Enter admin password:");
             if (enteredPassword === adminPassword) {
+                document.cookie = "adminAccess=true; max-age=3600; path=/";
                 enableEditing();
             } else {
                 alert("Incorrect password. You can only view the scores.");
+            }
+        }
+
+        function checkAdminAccess() {
+            const cookies = document.cookie.split("; ").reduce((acc, cookie) => {
+                const [name, value] = cookie.split("=");
+                acc[name] = value;
+                return acc;
+            }, {});
+            if (cookies.adminAccess === "true") {
+                enableEditing();
             }
         }
 
