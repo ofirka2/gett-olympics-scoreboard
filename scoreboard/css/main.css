@@ -1,0 +1,107 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 800px;
+    width: 90%;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.admin-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-button:hover {
+    background-color: #45a049;
+}
+
+.group {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-weight: 600;
+    color: #4CAF50;
+}
+
+.score-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.score-table th, .score-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.score-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+.score-table td {
+    background-color: #f9f9f9;
+    color: #555;
+    cursor: pointer;
+}
+
+.score-table td:focus {
+    outline: none;
+    background-color: #e0f7fa;
+}
+
+.highlight {
+    background-color: #c8e6c9 !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .score-table th, .score-table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}

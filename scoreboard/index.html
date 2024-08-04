@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gett Olympics Games Scoreboard">
+    <title>Gett Olympics Games Scoreboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="Screenshot (3).png" alt="Gett Olympics Games" class="logo">
+            <h1>Gett Olympics Games Scoreboard</h1>
+        </header>
+        <button class="admin-button" onclick="requestAdminAccess()">Admin</button>
+        <main id="scoreboard">
+            <div class="group">
+                <h2>Group A</h2>
+                <table id="groupA" class="score-table">
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td contenteditable="false">Team A1</td>
+                            <td contenteditable="false">0</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="false">Team A2</td>
+                            <td contenteditable="false">0</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="false">Team A3</td>
+                            <td contenteditable="false">0</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="false">Team A4</td>
+                            <td contenteditable="false">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="group">
+                <h2>Group B</h2>
+                <table id="groupB" class="score-table">
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td contenteditable="false">Team B1</td>
+                            <td contenteditable="false">0</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="false">Team B2</td>
+                            <td contenteditable="false">0</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="false">Team B3</td>
+                            <td contenteditable="false">0</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="false">Team B4</td>
+                            <td contenteditable="false">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
